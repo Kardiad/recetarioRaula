@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Recetario</title>
+</head>
+<body>
+    <header class="pb-5">
+        <h1 class="text-center">Recetario de la doctora Raula</h1>
+        <div class="container d-flex justify-content-center">
+            <img class="logo">
+            <nav class="row d-flex">
+                <div class="row d-flex justify-content-column">
+                    <label for="query" class="form-label text-center">Escoja ingrediente principal</label>
+                    <input type="text" class="form-label text-center input" id="query" placeholder="ej Pollo, Chicken">
+                </div>
+            </nav>
+    </header>
+    </div>
+    <main class="container">
+        <section>
+            <p class="error" id='resultado'></p>
+            <table class="table text-center d-none">
+            <thead>
+              <tr>
+                <th scope="col">Imagen</th>
+                <th scope="col">Nombre receta</th>
+                <th scope="col">Kcal</th>
+              </tr>
+            </thead>
+            <tbody id="resultados">
+            </tbody>
+          </table>
+        </section>
+        <section class="d-flex justify-content-between d-none botones" id="botonera">
+            <a class="btn btn-primary" id="anterior"><i class="fas fa-arrow-circle-left"></i> Anterior</a>
+            <p>La página en la que se encuentra es <span id="pagina"></span></p>
+            <a class="btn btn-primary" id="adelante">Siguiente <i class="fas fa-arrow-circle-right"></i></a>
+        </section>
+    </main>
+    <footer>
+        <p class="text-center">Website creado por Kardiad &copy;</p>
+    </footer>
+</body>
+</html>
