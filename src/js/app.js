@@ -11,6 +11,7 @@ export const conexion = async(query, pepe, wololo) =>{
     let resp = '';
     let data = '';
     if(pepe === false){
+        y=0;
         const url = `${httpProvider}q=${query}&app_id=319131b3&app_key=cb08df52f86317722ba6e2aca2153d0d`;
         resp = await fetch(url);
         data = await resp.json();
