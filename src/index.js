@@ -9,8 +9,8 @@ const urlImg = img.substring(bundlePosition, img.lenght);
 const imgLogo = document.querySelector('.logo');
 imgLogo.setAttribute('src', `${img}`);
 query.addEventListener('keypress', (event)=>{
-    window.scroll(0, 0);
     if(event.key === 'Enter'){
+        window.scroll(0, 0);
         conexion(query.value, false, '');
     }
 })
