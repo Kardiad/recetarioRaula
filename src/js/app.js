@@ -56,8 +56,9 @@ export const conexion = async(query, pepe, wololo) =>{
         }else if(wololo===false){
             y--;
             x--;
-            if(y<0){
+            if(y<0 || x<1){
                 y=0;
+                x=1;
             }
             pagina.innerHTML = x;
         }
