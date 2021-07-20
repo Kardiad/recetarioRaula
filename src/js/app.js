@@ -20,7 +20,7 @@ export const conexion = async(query, pepe, wololo) =>{
     }else{
         resp = await fetch(query);
         data = await resp.json();
-    }    
+    }
     resultados.innerHTML = '';
     if(data.hits.length === 0){
         tabla.classList.add('d-none');
@@ -39,7 +39,8 @@ export const conexion = async(query, pepe, wololo) =>{
             <td>${element.recipe.calories.toFixed(2)} kcal</td>
           </tr>`;
         });
-        pagina.innerHTML = y;
+        let x = y+1;
+        pagina.innerHTML = x;
         adelante.setAttribute('href', `${data._links.next.href}`);
         if(y<=0){
             y=0;
@@ -50,13 +51,15 @@ export const conexion = async(query, pepe, wololo) =>{
         }
         if(wololo===true){
             y++;
-            pagina.innerHTML = y;
+            x++;
+            pagina.innerHTML = x;
         }else if(wololo===false){
             y--;
+            x--;
             if(y<0){
                 y=0;
             }
-            pagina.innerHTML = y;
+            pagina.innerHTML = x;
         }
     }    
 }
