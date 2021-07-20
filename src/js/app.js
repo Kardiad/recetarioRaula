@@ -37,7 +37,7 @@ export const conexion = async(query, pepe, wololo) =>{
             <th scope="row"><img class="imagen" src="${element.recipe.image}"></th>
             <td class="m-auto"><p>${element.recipe.label}</p><p><a href="${element.recipe.url}" class="btn btn-primary" target="_blank">Pincha aquí para ver receta</a></p>
             <p>${element.recipe.calories.toFixed(2)} kcal</p><p>Se suele comer para: ${(element.recipe.mealType)? element.recipe.mealType : 'No está definido su hora de comer en la base de datos'}</p>
-            <p>La gastronomía a la que pertenece el plato es: ${element.recipe.cuisineType}</td>
+            <p>La gastronomía a la que pertenece el plato es: ${(element.recipe.cuisineType)? element.recipe.cuisineType : 'Es universal, no hay orígenes definidos'}</td>
           </tr>`;
         });
         let x = y+1;
